@@ -1,6 +1,7 @@
 # Spotify-Data-Pipeline-on-AWS
 This project uses various AWS services to build an ETL (Extract, Transform, Load) pipeline for data fetched from the Spotify API. The pipeline retrieves data from the Spotify API, transforms it to a desired format, and loads it into an AWS data store for further analysis using Amazon Athena.
 
+![alt text](https://github.com/Ani6629/Spotify-Data-Pipeline-on-AWS/blob/main/88C8909F-19E2-48DF-812D-F2FD99B77B63.jpg)
 ## Contents
 
 - [Dataset/API](#datasetapi)
@@ -26,7 +27,14 @@ This project uses the following AWS services:
 - **AWS Glue Data Catalog:** This metadata repository makes the transformed data immediately searchable and available for querying.
 - **Amazon Athena:** Athena provides an interface for querying the music data using standard SQL.
 
+<a name="python-dependencies"></a>
+## Python Dependencies
 
+This project relies on the following Python packages:
+
+- pandas
+- numpy
+- spotipy
 
 <a name="execution-flow"></a>
 
@@ -56,17 +64,6 @@ To set up and run this project:
 - If you encounter an error like "No output location provided...", you need to set the query result location in Athena. You can do this in the workgroup settings.
 - You may also encounter an error while creating the Lambda function due to issues importing the pandas and spotipy packages. This is because AWS doesn't directly support these packages. To resolve this, you'll need to add a Lambda layer for these packages
 
-<a name="python-dependencies"></a>
-## Python Dependencies
 
-This project relies on the following Python packages:
 
-- pandas
-- numpy
-- spotipy
-
-These packages can be installed using pip:
-
-```bash
-pip install pandas numpy spotipy
 
